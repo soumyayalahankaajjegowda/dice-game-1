@@ -24,7 +24,6 @@ h1 {
     text-shadow: 5px 0 #9eb7d8;
     font-size: 2.5rem;
     text-align: center;
-
 }
 
 p {
@@ -37,21 +36,23 @@ img {
 }
 
 .bottom {
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .btn {
+    padding: 10px 20px;
     background: #68e9be;
     font-family: "indie Flower", cursive;
     border-radius: 10px;
-    color: #131010;
+    color: #130101;
     font-size: 20px;
     padding: 16px 25px 16px 25px;
+    cursor: pointer;
  
 }
 
 .butn:hover {
-    background: #104386;
+    background: #3579da;
 }
 
 .even-roll {
