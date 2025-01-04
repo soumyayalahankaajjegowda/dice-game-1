@@ -1,24 +1,29 @@
+//players are named player1 & player2//
 let player1 = "player1";
 let player2 = "player2";
+
+// these variables track how many times each player wins.
 
 let player1Wins = 0; //variable keeps track of number of time player1 wins the game//
 let player2Wins = 0; //variable keeps track of number of time player2 wins the game//
 //0 indicates at the start neither of the player won. both player starts with the value 0//
 
-
+// this function allows players to change their names.it uses prompt() to get new names.
 function editName() {
+
+    // names are updated in the HTML//
     player1 = prompt("Change player1 Name");
     player2 = prompt("Change player2 Name");
 
     if (player1.length < 1 || player2.length < 1) {
-        alert('Please enter a valid name');
+        alert('Please enter a valid name');// if either name is left empty. it shows an alert asking for valid name.
         return;
     }
     document.querySelector("p.player1").innerHTML = player1;
     document.querySelector("p.player2").innerHTML = player2;
 }
 
-
+//when the user clicks the "Roll the dice" button, the dice images change to a rolling GIF for both the palyers
 function rollTheDice() {
     let diceNum1 = document.querySelector(".img1");
     let diceNum2 = document.querySelector(".img2");
@@ -39,21 +44,21 @@ function rollTheDice() {
    // context.clearrect(0,0, canvas.width, canvas.height);
 
     setTimeout(() => {
-        let randomNumber1 = Math.floor(Math.random() * 5) + 1;
+        let randomNumber1 = Math.floor(Math.random() * 6) + 1;
         let randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
         diceNum1.setAttribute('src', 'dice' + randomNumber1 + '.png');
         diceNum2.setAttribute('src', 'dice' + randomNumber2 + '.png');
 
-        // Determine the winner
+        // Determine the winner and loser
         if (randomNumber1 === randomNumber2) {
             result.innerHTML = "Draw!";
         } else if (randomNumber1 < randomNumber2) {
             player2Wins++; //increments player2's wins
-            result.innerHTML = (player2 + " WINS! total wins:" + player2Wins);
+            result.innerHTML = (player2 + " WINS! total wins:" + player2Wins + "<br>" + player1 + "LOST!");
         } else {
             player1Wins++; //increments player1's wins
-            result.innerHTML = (player1 + " WINS! total wins:" + player1Wins);
+            result.innerHTML = (player1 + " WINS! total wins:" + player1Wins + "<br>" + player2 + "LOST!");
         }
 
         canvas.addEventListener("mousemove", function(e) { 
