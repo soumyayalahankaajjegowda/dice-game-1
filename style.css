@@ -8,5 +8,56 @@
 .dice {
     text-align: center;
     display: inline-block;
+    margin: 20px;
+    color: rgb(102, 11, 187);
+    font-size: x-large;
+}
 
+body {
+    background-color: #be8bb6;
+    margin: 0;
+}
+
+h1 {
+    margin: 40px;
+    font-family: "lobster", cursive;
+    text-shadow: 5px 0 #9eb7d8;
+    font-size: 4.5rem;
+    text-align: center;
+
+}
+
+p {
+    font-size: 2rem;
+    font-family: "indie Flower", cursive;
+}
+
+img {
+    width: 100%;
+}
+
+.bottom {
+    padding-top: 30px;
+}
+
+.btn {
+    background: #68e9be;
+    font-family: "indie Flower", cursive;
+    border-radius: 10px;
+    color: #131010;
+    font-size: 20px;
+    padding: 16px 25px 16px 25px;
+ 
+}
+
+.butn:hover {
+    background: #233752;
+}
+
+.even-roll {
+    transition: transform 1.5s ease-out;
+}
+
+.odd-roll {
+    transition: transform 1.25s ease-out;
 }
