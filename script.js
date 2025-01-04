@@ -63,7 +63,7 @@ function rollTheDice() {
             context.clearRect(0, 0, canvas.width, canvas.height);// this clears a rectangular area of the canvas.(x,y,width, height)
             context.fillText("X: "+canvasX+", Y: "+canvasY, 10, 20);// this will display the current mouse position (in pixels)on the canvas,
         });
-        // context.fillStyle = "#ff0000"; //set fill color to red
-        // context.fillRect(50, 50, 100, 100);
+         context.fillStyle = "#14e9f3"; //set color
+         //context.fillRect(50, 50, 100, 100);
     }, 2500); //adding 2.5 seconds delay in show dice roll//
 }

@@ -51,13 +51,13 @@ img {
 }
 
 .butn:hover {
-    background: #233752;
+    background: #104386;
 }
 
 .even-roll {
-    transition: transform 1.5s ease-out;
+    transition: transform 1.0s ease-out;
 }
 
 .odd-roll {
-    transition: transform 1.25s ease-out;
+    transition: transform 1.05s ease-out;
 }
